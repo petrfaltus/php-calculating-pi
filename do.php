@@ -30,4 +30,9 @@ $pi2 = new tPi2($precision_digits);
 $pi2->calculate();
 $pi2->print_report();
 
+# the algorithm 3
+$pi3 = new tPi3($precision_digits);
+$pi3->calculate();
+$pi3->print_report();
+
 ?>
