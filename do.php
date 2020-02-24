@@ -23,6 +23,15 @@ spl_autoload_register(function ($class_name)
    }
 });
 
+/*
+$precision_digits = 6;
+
+# the algorithm 1
+$pi1 = new tPi1($precision_digits);
+$pi1->calculate();
+$pi1->print_report();
+*/
+
 $precision_digits = 201;
 
 # the algorithm 2
