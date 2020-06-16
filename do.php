@@ -23,6 +23,9 @@ spl_autoload_register(function ($class_name)
    }
 });
 
+echo "PHP version: ".phpversion().PHP_EOL;
+echo PHP_EOL;
+
 /*
 $precision_digits = 6;
 

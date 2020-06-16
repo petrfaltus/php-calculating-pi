@@ -1,14 +1,8 @@
 <?php
 
-class tPi2
+class tPi2 extends tPi
 {
  const DESCRIPTION = "Program pro vypocet Pi = 4*( (1/2+1/3) - (1/2^3+1/3^3)/3 + (1/2^5+1/3^5)/5 - (1/2^7+1/3^7)/7 + ... )";
-
- protected $precision_digits;
-
- protected $pi = "?";
- protected $calculation_cycles = 0;
- protected $calculation_time = 0;
 
  //----------------------------------------------------------------------------
  public function calculate()
@@ -45,38 +39,6 @@ class tPi2
 
   $finish_time = gettimeofday(true); // calculation time measurent
   $this->calculation_time = $finish_time - $start_time;
-
-  return;
- }
- //----------------------------------------------------------------------------
-
- //----------------------------------------------------------------------------
- public function get_pi()
- {
-  return $this->pi;
- }
- //----------------------------------------------------------------------------
- public function print_report()
- {
-  echo self::DESCRIPTION.PHP_EOL;
-  echo PHP_EOL;
-
-  echo $this->pi.PHP_EOL;
-  echo PHP_EOL;
-
-  echo "Desetinnych mist: ".$this->precision_digits.PHP_EOL;
-  echo "Vypocetnich cyklu: ".$this->calculation_cycles.PHP_EOL;
-  echo "Delka vypoctu: ".$this->calculation_time."s".PHP_EOL;
-  echo PHP_EOL;
-
-  return;
- }
- //----------------------------------------------------------------------------
-
- //----------------------------------------------------------------------------
- function __construct($precision_digits)
- {
-  $this->precision_digits = $precision_digits;
 
   return;
  }
